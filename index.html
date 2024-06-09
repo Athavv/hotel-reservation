@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Facture Client</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+    <h1>BOOKING HOTEL</h1>
+    <p>Indiquez vos dates de réservation - Toute annulation doit se faire 48h avant</p>
+    </header>
+    <main>
+    <div class="container">
+        <section class="form-section">
+            <div class="form-container">
+                <form name="formu1" class="booking-form" action="#">
+                    <table class="form-table" >
+                        <tr>
+                            <td><img src="./img/HOTEL.png" alt="Hotel booking form" class="logo-image"></td>
+                            <td><h1 class="form-title">Facture Client</h1></td>
+                        </tr>
+                        <tr>
+                            <td><label for="sejour">Lieu de séjour</label></td>
+                            <td><input type="text" id="sejour" class="input-text" placeholder="Lieu de séjour"></td>
+                        </tr>
+                        <tr>
+                            
+                            <td><p>Arrivée</p>
+                                <input type="date" id="datearr" class="input-date" placeholder="Arrivée"></td>
+                            <td><p>Départ</p>
+                                <input type="date" id="datedep" class="input-date" placeholder="Départ"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="adulte">Adulte</label></td>
+                            <td><input type="button" class="btn-add" value="+" onclick="updateValue('adulte', 1)" />
+                            <input type="number" id="adulte" class="input-number" value="0">    
+                            <input type="button" class="btn-subtract" value="-" onclick="updateValue('adulte', -1)" /></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><label for="enfant">Enfant</label></td>
+                            <td><input type="button" class="btn-add" value="+" onclick="updateValue('enfant', 1); addChild()" />
+                            <input type="number" id="enfant" class="input-number" value="0" readonly>
+                            <input type="button" class="btn-subtract" value="-" onclick="updateValue('enfant', -1)" /></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><label for="chambre">Chambre</label></td>
+                            <td><input type="button" class="btn-add" value="+" onclick="updateValue('chambre', 1)" />
+                            <input type="number" id="chambre" class="input-number" value="0">
+                            <input type="button" class="btn-subtract" value="-" onclick="updateValue('chambre', -1)" /></td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="button" class="btn btn-submit" value="Rechercher" onclick="updateConfirmation()" />
+                            <input type="button" class="btn btn-reset" value="Effacer" onclick="initFormulaire()" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="checkbox" id="workTrip" class="input-checkbox" />Je voyage pour le travail</td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+    
+            <div class="confirmation-container">
+                <table class="confirmation-table">
+                    <tr>
+                        <td><h1 class="confirmation-title">Confirmation de commande</h1></td>
+                    </tr>
+                    <tr>
+                        <td><label>Lieu de séjour :</label></td>
+                        <td><span id="confirmsejour">Où souhaitez-vous aller ?</span></td>
+                    </tr>
+                    <tr>
+                        <td><label>Date de séjour :</label></td>
+                        <td><p>Arrivée</p>
+                            <span id="confirmdatearr">YYYY-MM-DD</span></td>
+                        <td><p>Départ</p>
+                            <span id="confirmdatedep">YYYY-MM-DD</span></td>
+                    </tr>
+                    <tr>
+                        <td><label>Nombre d'adultes :</label></td>
+                        <td><span id="confirmAdulte">0</span></td>
+                    </tr>
+                    <tr>
+                        <td><label>Nombre d'enfants :</label></td>
+                        <td><span id="confirmEnfant">0</span></td>
+                    </tr>
+                    <tr>
+                        <td><label>Nombre de chambres :</label></td>
+                        <td><span id="confirmChambre">0</span></td>
+                    </tr>
+                    <tr>
+                        <td><label>Voyage pour le travail :</label></td>
+                        <td><span id="confirmWorkTrip">Non</span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+    </main>
+    
+    <footer>
+        <p>Indiquez vos dates de réservation - Toute annulation doit se faire avant 48h</p>
+    </footer>
+<script type="text/javascript" src="./script.js"></script> 
+
+</body>
+</html>

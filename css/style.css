@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('../img/hotelfond.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(81, 171, 231);
+    color: blue;
+    text-align: center;
+    padding: 14px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header p {
+    color: rgb(138, 0, 0);
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-container,
+.confirmation-container {
+    background-color: rgba(139, 66, 139, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin-bottom: 20px;
+    min-height: 200px; /* Fixed height to avoid shifting */
+}
+
+.confirmation-container {
+    background-color: rgba(173, 216, 230, 0.8);
+}
+
+.form-table,
+.confirmation-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td,
+.confirmation-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.input-text,
+.input-date,
+.input-number {
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-number {
+    width: 50px;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 180px;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.btn-add {
+    background-color: #6a5acd;
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-subtract {
+    background-color: #32cd32;
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-submit,
+.btn-reset {
+    width: 100%;
+    padding: 10px;
+}
+
+.btn-submit {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.btn-reset {
+    background-color: #ff4500;
+    color: #fff;
+}
+
+.input-checkbox {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+.confirmation-title {
+    margin-top: 0;
+    color: #8b0000;
+}
+
+footer {
+    background-color: red;
+    color: yellow;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 500px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-container,
+    .confirmation-container {
+        width: 45%;
+    }
+}
+
+@media (min-width: 900px) {
+    .form-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 599px) {
+    .form-container,
+    .confirmation-container {
+        width: 90%;
+    }
+
+    .input-number {
+        width: 10%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+.logo-image {
+    width: 100px;
+    height: 100px;
+}
+
+.child-input {
+    padding: 10px 0px;
+    margin: 5px;
+    border: none;
+    border-radius: 180px;
+    width: 120px;
+}
+
+td span {
+    color: grey;
+    opacity: 100%;
+}
